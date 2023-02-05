@@ -22,43 +22,76 @@
 <details>
 <summary>FILM</summary>
 <br>
-Pantallazo de FILM
+
+![films](https://github.com/Calbacho/w3-database-project/blob/main/films.png)
+
 </details>
 
 <details>
 <summary>ACTORS</summary>
 <br>
-Pantallazo de ACTOR
+
+ID del actor, nombres y apellidos de los actores.
+<br>
+<br>
+![Actors](https://github.com/Calbacho/w3-database-project/blob/main/Actors.png)
+
 </details>
 
 <details>
 <summary>CATEGORY</summary>
 <br>
-Pantallazo de CATEGORY
+
+ID de categoria, nombre de categoria (comedia, aventura, romance)
+<br>
+<br>
+![category](https://github.com/Calbacho/w3-database-project/blob/main/category.png)
+
 </details>
 
 <details>
 <summary>INVENTORY</summary>
 <br>
-Pantallazo de INVENTORY
+
+ID de inventario, ID de pelicula, ID Tienda
+<br>
+<br>
+![inventory](https://github.com/Calbacho/w3-database-project/blob/main/inventory.png)
+
 </details>
 
 <details>
 <summary>LANGUAGE</summary>
 <br>
-Pantallazo de LANGUAGE
+
+ID de lenguaje, nombre de lenguaje (Ingles, Italiano, etc)
+<br>
+<br>
+![language](https://github.com/Calbacho/w3-database-project/blob/main/language.png)
+
 </details>
 
 <details>
 <summary>OLD_HDD</summary>
 <br>
-Pantallazo de OLD_HDD
+
+Nombre y apellido de los actores, ID de inventario, titulos de peliculas donde aparece el respectivo actor o actriz
+<br>
+<br>
+![oldhdd](https://github.com/Calbacho/w3-database-project/blob/main/oldhdd.png)
+
 </details>
 
 <details>
 <summary>RENTAL</summary>
 <br>
-Pantallazo de RENTAL
+
+ID de alquiler, fecha de alquiler, fecha de retorno, ID de inventario, ID de cliente, ID del staff
+<br>
+<br>
+
+![rental](https://github.com/Calbacho/w3-database-project/blob/main/rental.png)
+
 </details>
 
  ### Objetivo:
@@ -70,7 +103,8 @@ El objetivo se basó en  hacer un analisis exploratorio y posterior limpieza par
  
 ## 🤓 Análisis general y limpieza
 
-- Análisis general con `código` para mostrar que funciones usamos
+En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete CSV que nos han proporcionado utilizando las técnicas más comunes como son `.head`,`.tail`,`.info`, `.shape`, `.columns` y `.value_counts`  para obtener información general de cada CSV.
+
 + Delattes específicos con **drop down**
 Desarrollo de inventory... etc.
 
