@@ -8,7 +8,7 @@
 2.[🤓 Análisis general y limpieza](#análisis)\
 3.[🗂️ Database](#database)\
 4.[🧬 Transformación](#transformación)\
-5.[📊 BONUS: Consultas](#consultas)
+5.[📊 Consultas](#consultas)
 
 
 <a name="descripción"/>
@@ -277,7 +277,7 @@ GROUP BY customer.customer_id, name , lastname, telephone, mail
 
 <a name="consultas"/>
 
-## 📊 BONUS: Consultas
+## 📊 Consultas
 
 <details>
 <summary>LOS CLIENTES QUE MÁS ALQUILAN</summary>
