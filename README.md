@@ -17,7 +17,7 @@
 
 (Aquí introduciremos una descripción del proyecto.)
 
- - **Las tablas que tenemos inicialmente:**
+**Las tablas que tenemos inicialmente:**
 
 <details>
 <summary>FILM</summary>
@@ -111,6 +111,7 @@ En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete
 <summary>¿ACTRIZ DUPLICADA?</summary>
 <br>
 
+ ![susan](https://github.com/Calbacho/w3-database-project/blob/main/Susandavis.png)
 
 <br>
 <br>
@@ -143,7 +144,7 @@ En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete
 </details>
 
 
-(Desarrollo de inventory... etc.)
+**¿Qué películas tenemos?**
 
 
  <a name="database"/>
@@ -247,3 +248,7 @@ Descripción general
 <a name="consultas"/>
 
 ## 📊 BONUS: Consultas
+
+- Top 3 clientes
+- Top 3 películas alquiladas
+- Algo con el tiempo que tardan en devolver las pelis
