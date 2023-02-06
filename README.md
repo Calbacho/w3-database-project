@@ -103,10 +103,45 @@ El objetivo se basó en  hacer un analisis exploratorio y posterior limpieza par
  
 ## 🤓 Análisis general y limpieza
 
-En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete CSV que nos han proporcionado utilizando las técnicas más comunes como son `.head`,`.tail`,`.info`, `.shape`, `.columns` y `.value_counts`  para obtener información general de cada CSV.
+En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete CSV que nos han proporcionado utilizando las técnicas más comunes como son `.head`,`.tail`,`.info`, `.shape`, `.columns` y `.value_counts`  para obtener información general de cada CSV. El objetivo de esta tarea consiste en verificar que las columnas estén limpias, tengan sentido, y encontrar inconsistencias. Durante este proceso, encontramos las siguientes incongruencias:
 
-+ Delattes específicos con **drop down**
-Desarrollo de inventory... etc.
+<details>
+<summary>¿ACTRIZ DUPLICADA?</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>¿RELEASE DATE INCORRECTO?</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+<details>
+<summary>¿FALTA UN RENTAL ID?</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+
+(Desarrollo de inventory... etc.)
 
 
  <a name="database"/>
