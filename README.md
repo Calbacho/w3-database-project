@@ -23,6 +23,8 @@
 <summary>FILM</summary>
 <br>
 
+ 12 columnas describiendo los atributos más importantes de cada CD, desde el nombre de la película, hasta el lenguaje, el contenido adicional y los costes de alquiler.
+ 
 ![films](https://github.com/Calbacho/w3-database-project/blob/main/films.png)
 
 </details>
