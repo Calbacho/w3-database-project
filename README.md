@@ -15,7 +15,7 @@
 
 ## ✍️ Descripción
 
-(Aquí introduciremos una descripción del proyecto.)
+En este proyecto tenemos que limpiar siete .csv provenientes de un negocio de videoclub, y adaptar las tablas para su exportación a MySQL, con el fin de generar una nueva base de datos mucho más óptima.
 
 **Las tablas que tenemos inicialmente:**
 
@@ -98,7 +98,10 @@ ID de alquiler, fecha de alquiler, fecha de retorno, ID de inventario, ID de cli
 
  ### Objetivo:
  
-El objetivo se basó en  hacer un analisis exploratorio y posterior limpieza para relacionar las tablas de la manera ideal para el funcionamiento del video club.
+Nuestro objetivo es construir y proporcionar al cliente una base de datos consistente pero sencilla de manejar, intentando que las diferentes tablas finales se correspondan con las fichas operativas del negocio. Así, según la parcela de actividad que se esté realizando, el personal encargado podrá rellenar todos los datos de la misma en una única tabla.
+
+
+Gracias a las relaciones establecidas entre las tablas, el cliente podrá ejecutar una serie de consultas para obtener información relevante y actualizada del videoclub.
  
  
  <a name="análisis"/>
@@ -112,11 +115,6 @@ En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete
 <br>
 
  ![susan](https://github.com/Calbacho/w3-database-project/blob/main/Susandavis.png)
-
-<br>
-<br>
-
-
 
 </details>
 
@@ -163,70 +161,37 @@ print(list(ren.rental_id[ren.index==ren.rental_id -2])[0])
  <br>
 ... por lo que sabemos que **falta el rental_id nº 321**
 
-<br>
-<br>
-
-
 
 </details>
 
+<br>
 
 **¿Qué películas tenemos?**
+
+
+Explorando la tabla **INVENTORY** vimos que había mil películas inventariadas, y a través de **film_id** descubrimos que se correspondían con las primeras **223** películas de la tabla **FILMS**. En otras palabras, en nuestro inventario **sólo había películas con títulos de la ‘A’ a la ‘D’**. Esto nos hizo sospechar que tal vez la información estuviera incompleta.
+
+
+Poco después, durante el análisis de la tabla **RENTAL**, nos percatamos de que la columna **inventory_id** contenía valores por encima de los mil de la tabla **INVENTORY** (hasta el **4581**). Es decir, en nuestro videoclub se habían estado alquilando películas que no figuraban en inventario. Así nos convencimos de que nuestra hipótesis era correcta.
 
 
  <a name="database"/>
  
 ## 🗂️ Database
 
-Descripción general
-
-<details>
-<summary>FILMS</summary>
-<br>
+Nuestra intención siempre fue simplificar, además de profesionalizar, el manejo del videoclub. Para ello, decidimos quedarnos con las tablas que solo fueran indispensables, a pesar de que todas ellas proporcionaban alguna información valiosa. A continuación, detallamos el proceso de selección para nuestra base de datos:
 
 
-<br>
-<br>
-
-
-
-</details>
-
-<details>
-<summary>INVENTORY</summary>
-<br>
-
+- La tabla **FILM** es, presumiblemente, el catálogo, y por tanto nos pareció interesante mantenerla íntegra ya que supone el listado principal de películas de nuestro videoclub.
+- La tabla **OLD_HDD** contenía información que relacionaba ciertos actores con ciertos largometrajes, la cual decidimos añadir a la tabla anterior para poder desechar ésta.
+- La tabla **LANGUAGE** proveía datos sobre los posibles idiomas de las películas, por lo que también decidimos integrar esta información en Films, sustituyendo la columna numérica **language_id** por el idioma correspondiente.
+- La tabla **CATEGORY** recibió el mismo tratamiento que la anterior, emplazando en una nueva columna de Film el género de cada película.
+- La tabla **INVENTORY** proporcionaba información interesante, puesto que nos permitía relacionar la cinta de vídeo física con el título correspondiente.
+- La tabla **RENTAL** fue sin duda una de las más reveladoras, ya que nos permitió descubrir que había un inventario faltante, además de señalarnos datos tan importantes para el negocio como identificadores por cliente o número de días por alquiler.
+- La tabla **CUSTOMER** no existía entre nuestros .csv, pero nos pareció conveniente incorporarla a la base de datos del futuro negocio.
+- En la mayoría de las tablas encontramos una columna llamada Last update que no ofrecía datos relevantes, pues todos sus valores eran equivalentes para cada una de las tablas.
 
 <br>
-<br>
-
-
-
-</details>
-
-<details>
-<summary>RENTAL</summary>
-<br>
-
-
-<br>
-<br>
-
-
-
-</details>
-
-<details>
-<summary>CUSTOMER</summary>
-<br>
-
-
-<br>
-<br>
-
-
-
-</details>
 
 <img src="https://github.com/Calbacho/w3-database-project/blob/main/EERD_inicial.png" width="550" height="400" />
 
@@ -305,7 +270,7 @@ LEFT JOIN customer ON customer.customer_id = rental.customer_id
 GROUP BY customer.customer_id, name , lastname, telephone, mail
 ;
  ```
-
+![customer_master](https://github.com/Calbacho/w3-database-project/blob/main/customer_master.png)
 
 </details>
 
@@ -330,6 +295,8 @@ ORDER BY Rentals desc
 LIMIT 5
  ```
 
+![top_clientes_cantidad](https://github.com/Calbacho/w3-database-project/blob/main/top_clientes_cantidad.PNG)
+	
 </details>
 
 <details>
@@ -346,10 +313,7 @@ ORDER BY 'Total Spent' desc
 LIMIT 5 
  ```
 
-<br>
-<br>
-
-
+![top_clientes_income2](https://github.com/Calbacho/w3-database-project/blob/main/top_clientes_income2.PNG)
 
 </details>
 
@@ -367,9 +331,6 @@ ORDER BY Alquileres DESC
 LIMIT 5
  ```
 
-<br>
-<br>
-
-
+![top_pelis](https://github.com/Calbacho/w3-database-project/blob/main/top_pelis.png)
 
 </details>
