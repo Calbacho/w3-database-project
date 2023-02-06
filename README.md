@@ -124,10 +124,19 @@ En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete
 <summary>¿RELEASE DATE INCORRECTO?</summary>
 <br>
 
-
+Notamos que la columna **release_year**, la fecha de estreno de las películas, indica **2006** para todas las pelis.
+<br>
+Pero en las fechas de los alquileres: 
+```
+year = []
+for i in ren.rental_date:
+    year.append(i[0:4])
+set(year) 
+```
+**2005**
 <br>
 <br>
-
+Al ser todos los alquileres previos a 2006, concluimos que la columna **release_year** está incorrectamente introducida y por tanto la vaciamos.
 
 
 </details>
@@ -135,6 +144,24 @@ En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete
 <summary>¿FALTA UN RENTAL ID?</summary>
 <br>
 
+![susan](https://github.com/Calbacho/w3-database-project/blob/main/rental_head.png)
+<br>
+
+Como se puede observar, la diferencia entre **id** y **rental_id** pasa de ser **+1** al principio a **+2** al final, por lo que se intuye que se han saltado un rental_id.
+<br>
+ 
+ Para obtener dicho **rental_id**:
+```
+print(list(ren.rental_id[ren.index==ren.rental_id -1])[-1])
+```
+ **320**
+```
+print(list(ren.rental_id[ren.index==ren.rental_id -2])[0])
+```
+ **322**
+ <br>
+ <br>
+... por lo que sabemos que **falta el rental_id nº 321**
 
 <br>
 <br>
@@ -201,8 +228,7 @@ Descripción general
 
 </details>
 
-**PANTALLAZO**
-
+<img src="https://github.com/Calbacho/w3-database-project/blob/main/EERD_inicial.png" width="550" height="400" />
 
 <a name="transformación"/>
 
@@ -249,6 +275,38 @@ Descripción general
 
 ## 📊 BONUS: Consultas
 
-- Top 3 clientes
-- Top 3 películas alquiladas
-- Algo con el tiempo que tardan en devolver las pelis
+<details>
+<summary>LOS CLIENTES QUE MÁS ALQUILAN</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>LOS CLIENTES QUE MÁS GASTAN</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>LAS PELÍCULAS QUE MÁS SE ALQUILAN</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
