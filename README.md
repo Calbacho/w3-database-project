@@ -149,7 +149,54 @@ En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete
 ## 🗂️ Database
 
 Descripción general
-Drop down por tabla
+
+<details>
+<summary>FILMS</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>INVENTORY</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>RENTAL</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>CUSTOMER</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
 
 **PANTALLAZO**
 
@@ -157,6 +204,42 @@ Drop down por tabla
 <a name="transformación"/>
 
 ## 🧬 Transformación
+
+<details>
+<summary>INVENTORY_MASTER</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>RENTAL_MASTER</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
+
+<details>
+<summary>CUSTOMER_MASTER</summary>
+<br>
+
+
+<br>
+<br>
+
+
+
+</details>
 
 
 <a name="consultas"/>
