@@ -2,7 +2,7 @@
 
 ![portada](https://github.com/Calbacho/w3-database-project/blob/main/videocl.jpg)
 
-## ⛓️ Índice
+## Índice
 
 1.[ Descripción](#descripción)\
 2.[Análisis general y limpieza](#análisis)\
@@ -110,13 +110,7 @@ Gracias a las relaciones establecidas entre las tablas, el cliente podrá ejecut
 
 En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete CSV que nos han proporcionado utilizando las técnicas más comunes como son `.head`,`.tail`,`.info`, `.shape`, `.columns` y `.value_counts`  para obtener información general de cada CSV. El objetivo de esta tarea consiste en verificar que las columnas estén limpias, tengan sentido, y encontrar inconsistencias. Durante este proceso, encontramos las siguientes incongruencias:
 
-<details>
-<summary>¿ACTRIZ DUPLICADA?</summary>
-<br>
 
- ![susan](https://github.com/Calbacho/w3-database-project/blob/main/Susandavis.png)
-
-</details>
 
 <details>
 <summary>¿RELEASE DATE INCORRECTO?</summary>
@@ -166,7 +160,17 @@ print(list(ren.rental_id[ren.index==ren.rental_id -2])[0])
 
 <br>
 
-**¿Qué películas tenemos?**
+<details>
+<summary>¿Quién es Susan Davies?</summary>
+<br>
+
+ ![susan](https://github.com/Calbacho/w3-database-project/blob/main/Susandavis.png)
+
+</details>
+
+<br>
+
+## ¿Qué películas tenemos?
 
 
 Explorando la tabla **INVENTORY** vimos que había mil películas inventariadas, y a través de **film_id** descubrimos que se correspondían con las primeras **223** películas de la tabla **FILMS**. En otras palabras, en nuestro inventario **sólo había películas con títulos de la ‘A’ a la ‘D’**. Esto nos hizo sospechar que tal vez la información estuviera incompleta.
@@ -200,7 +204,7 @@ Nuestra intención siempre fue simplificar, además de profesionalizar, el manej
 ## 🧬 Transformación
 
 <details>
-<summary>INVENTORY_MASTER</summary>
+<summary>Inventario_final</summary>
 <br>
  
 ```
@@ -234,7 +238,7 @@ LEFT JOIN rental ON rental.inventory_id = inventory.inventory_id
 </details>
 
 <details>
-<summary>RENTAL_MASTER</summary>
+<summary>Alquileres_final</summary>
 <br>
 
 ```
@@ -253,7 +257,7 @@ LEFT JOIN films ON inventory.film_id = films.film_id
 </details>
 
 <details>
-<summary>CUSTOMER_MASTER</summary>
+<summary>Clientes_final</summary>
 <br>
  
  ```
