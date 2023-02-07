@@ -1,19 +1,19 @@
 # W3 Project - Building mySQL Data-base
 
-![portada](https://github.com/Calbacho/w3-database-project/blob/main/videoclip2.jpg)
+![portada](https://github.com/Calbacho/w3-database-project/blob/main/videocl.jpg)
 
 ## ⛓️ Índice
 
-1.[✍️ Descripción](#descripción)\
-2.[🤓 Análisis general y limpieza](#análisis)\
-3.[🗂️ Database](#database)\
-4.[🧬 Transformación](#transformación)\
-5.[📊 Consultas](#consultas)
+1.[ Descripción](#descripción)\
+2.[Análisis general y limpieza](#análisis)\
+3.[Database](#database)\
+4.[Transformación](#transformación)\
+5.[Consultas](#consultas)
 
 
 <a name="descripción"/>
 
-## ✍️ Descripción
+##  Descripción
 
 En este proyecto tenemos que limpiar siete .csv provenientes de un negocio de videoclub, y adaptar las tablas para su exportación a MySQL, con el fin de generar una nueva base de datos mucho más óptima.
 
@@ -106,7 +106,7 @@ Gracias a las relaciones establecidas entre las tablas, el cliente podrá ejecut
  
  <a name="análisis"/>
  
-## 🤓 Análisis general y limpieza
+## Análisis general y limpieza
 
 En primer lugar hemos realizado un ejercicio analítico de cada uno de los siete CSV que nos han proporcionado utilizando las técnicas más comunes como son `.head`,`.tail`,`.info`, `.shape`, `.columns` y `.value_counts`  para obtener información general de cada CSV. El objetivo de esta tarea consiste en verificar que las columnas estén limpias, tengan sentido, y encontrar inconsistencias. Durante este proceso, encontramos las siguientes incongruencias:
 
@@ -177,7 +177,7 @@ Poco después, durante el análisis de la tabla **RENTAL**, nos percatamos de qu
 
  <a name="database"/>
  
-## 🗂️ Database
+##  Database
 
 Nuestra intención siempre fue simplificar, además de profesionalizar, el manejo del videoclub. Para ello, decidimos quedarnos con las tablas que solo fueran indispensables, a pesar de que todas ellas proporcionaban alguna información valiosa. A continuación, detallamos el proceso de selección para nuestra base de datos:
 
@@ -277,7 +277,7 @@ GROUP BY customer.customer_id, name , lastname, telephone, mail
 
 <a name="consultas"/>
 
-## 📊 Consultas
+## Consultas
 
 <details>
 <summary>LOS CLIENTES QUE MÁS ALQUILAN</summary>
